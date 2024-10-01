@@ -22,6 +22,6 @@ jobs:
     - name: Check out the code
       uses: actions/checkout@v2
     - name: Compile test code
-      run: g++ -Wall -g -o check_whitespace_test check_whitespace.c check_whitespace_test.cpp -lgtest -pthread
+      run: g++ -Wall -g -o check_whitespace_test check_whitespace.c check_whitespace_test.cpp -lgtest -lgtest_main -pthread  # Updated command
     - name: Run test
       run: ./check_whitespace_test
